@@ -7,6 +7,21 @@ The Code Repository for  "[HTS-AT: A Hierarchical Token-Semantic Audio Transform
 
 In this paper, we devise a model, HTS-AT, by combining a [swin transformer](https://github.com/microsoft/Swin-Transformer) with a token-semantic module and adapt it in to **audio classification** and **sound event detection tasks**. HTS-AT is an efficient and light-weight audio transformer with a hierarchical structure and has only 30 million parameters. It achieves new state-of-the-art (SOTA) results on AudioSet and ESC-50, and equals the SOTA on Speech Command V2. It also achieves better performance in event localization than the previous CNN-based models. 
 
+## Installation
+First install PyTorch for your system and CUDA version. e.g.
+
+```
+pip3 install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu116
+```
+
+Then, install other dependencies
+
+```
+pip install -r requirements.txt
+```
+
+## Configuration
+
 ### Set the Configuration File: config.py
 
 The script *config.py* contains all configurations you need to assign to run your code. 
@@ -25,6 +40,7 @@ classes_num = 50
 ### Model Checkpoints:
 
 We provide the model checkpoints on three datasets (and additionally DESED dataset) in this [link](https://drive.google.com/drive/folders/1f5VYMk0uos_YnuBshgmaTVioXbs7Kmz6?usp=sharing). Feel free to download and test it.
+
 
 ## Citing
 ```
