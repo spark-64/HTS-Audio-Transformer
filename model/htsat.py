@@ -6,11 +6,9 @@
 # Swin Transformer for Computer Vision: https://arxiv.org/pdf/2103.14030.pdf
 
 
-import logging
-import pdb
+
 import math
 import random
-from numpy.core.fromnumeric import clip, reshape
 import torch
 import torch.nn as nn
 import torch.utils.checkpoint as checkpoint
@@ -18,8 +16,6 @@ import torch.utils.checkpoint as checkpoint
 from torchlibrosa.stft import Spectrogram, LogmelFilterBank
 from torchlibrosa.augmentation import SpecAugmentation
 
-from itertools import repeat
-from typing import List
 from .layers import PatchEmbed, Mlp, DropPath, trunc_normal_, to_2tuple
 from utils import do_mixup, interpolate
 
